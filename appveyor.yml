@@ -4,7 +4,10 @@ branches:
 version: '{build}'
 clone_depth: 1
 install:
-- npm -g install npm@2
+#- npm -g install npm@2
+- ps: Install-product node 6
+- node --version
+- npm --version
 - npm install --force gulp
 - npm install --force bower
 - npm install --force

@@ -3,6 +3,8 @@ branches:
     - master
 version: '{build}'
 clone_depth: 1
+cache:
+- node_modules -> package.json
 install:
 #- npm -g install npm@2
 - ps: Install-product node 6
@@ -14,8 +16,7 @@ install:
 - bower install
 build_script:
 - gulp build
-cache:
-- node_modules -> package.json
+test: off
 artifacts:
 - path: dist
 deploy:

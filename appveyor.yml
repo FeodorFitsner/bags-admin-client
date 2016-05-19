@@ -8,12 +8,12 @@ install:
 - ps: Install-product node 6
 - node --version
 - npm --version
-- npm install --force gulp
-- npm install --force bower
-- npm install --force
-- node_modules\.bin\bower install
+- npm install -g gulp
+- npm install -g bower
+- npm install
+- bower install
 build_script:
-- node_modules\.bin\gulp build
+- gulp build
 cache:
 - node_modules -> package.json
 artifacts:
